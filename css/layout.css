@@ -1,71 +1,127 @@
-/* ================================
-   LAYOUT - QUETZAL AIR
-   ================================ */
+/* ============================================
+   QUETZAL AIR - LAYOUT GENERAL
+   ============================================ */
 
-/* Contenedor principal de páginas internas */
-.page-container {
-    width: 95%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 2rem 0;
-}
-
-/* Encabezado de página */
-.page-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.page-header h1 {
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-/* Tarjetas internas */
-.card {
-    background: var(--glass);
-    border: 1px solid var(--glass-borde);
-    border-radius: var(--radius);
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: var(--sombra);
-}
-
-/* Secciones con título */
-.section-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-/* Botones de navegación */
-.nav-buttons {
+/* CONTENEDOR PRINCIPAL CENTRADO */
+.menu-wrapper {
+    width: 100%;
+    min-height: calc(100vh - 120px);
     display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.nav-buttons .btn {
-    width: 48%;
+/* CARDS PRINCIPALES */
+.menu-card {
+    width: 100%;
+    max-width: 480px;
+    background: var(--glass);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    backdrop-filter: blur(14px);
+    text-align: center;
 }
 
-/* Tablas */
+/* BOTONES DEL MENÚ */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+/* ENLACES SECUNDARIOS */
+.menu-links {
+    margin-top: 20px;
+}
+
+.menu-links a {
+    color: var(--dorado);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    opacity: 0.7;
+}
+
+/* TABLAS */
 .table-container {
+    width: 100%;
     overflow-x: auto;
+    margin-top: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    background: var(--glass);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+thead {
+    background: var(--azul-celeste);
+    color: var(--negro);
 }
 
 th, td {
-    padding: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 14px;
+    text-align: center;
 }
 
-th {
-    background: rgba(255, 255, 255, 0.1);
-    font-weight: 600;
+tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.05);
+}
+
+/* MODALES */
+.modal-pago {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Mostrar modal cuando checkbox está activo */
+#modalPago:checked ~ .modal-pago {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--glass);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+}
+
+/* Loader circular */
+.loader-circle {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255,255,255,0.3);
+    border-top-color: var(--dorado);
+    border-radius: 50%;
+    margin: auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Vista completada */
+.vista-completado h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: var(--dorado);
 }
