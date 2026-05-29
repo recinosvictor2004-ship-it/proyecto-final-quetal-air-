@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados</title>
+    <title>Quetzal Air - Vuelos disponibles</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -11,17 +11,18 @@
 </head>
 <body>
 
-    <div class="page-container">
+    <!-- HEADER -->
+    <header class="header">
+        <img src="img/logo.png" alt="Quetzal Air" class="header-logo">
+    </header>
 
-        <div class="page-header">
-            <img src="img/logo.png" class="login-logo">
-            <h1>Resultados</h1>
-            <p class="login-subtitle">Vuelos encontrados</p>
-        </div>
+    <!-- CONTENIDO CENTRADO -->
+    <main class="menu-wrapper">
 
-        <div class="card">
+        <div class="menu-card">
 
-            <h2 class="section-title">Vuelos disponibles</h2>
+            <h1 class="menu-title">Vuelos disponibles</h1>
+            <p class="menu-subtitle">Resultados de tu búsqueda</p>
 
             <div class="table-container">
                 <table>
@@ -58,14 +59,19 @@
                 </table>
             </div>
 
-            <div class="nav-buttons">
-                <a href="buscar.html" class="btn btn-secondary">Nueva búsqueda</a>
-                <a href="loader.html" class="btn">Continuar</a>
+            <div class="menu-buttons" style="margin-top: 25px;">
+                <a href="buscar.html" class="btn menu-btn">Nueva búsqueda</a>
+                <a href="loader.html" class="btn menu-btn">Continuar</a>
             </div>
 
         </div>
 
-    </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>
