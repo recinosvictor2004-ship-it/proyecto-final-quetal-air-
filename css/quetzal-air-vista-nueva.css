@@ -1,0 +1,112 @@
+/* ============================================
+   QUETZAL AIR - VISTA NUEVA (ACME MILES)
+   ============================================ */
+
+/* CONTENEDOR PRINCIPAL */
+.vista-nueva-wrapper {
+    width: 100%;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CARD PRINCIPAL */
+.vista-nueva-card {
+    width: 100%;
+    max-width: 520px;
+    background: var(--glass);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    backdrop-filter: blur(14px);
+    text-align: center;
+}
+
+/* LOGO */
+.vista-nueva-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+/* TÍTULOS */
+.vista-nueva-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blanco);
+}
+
+.vista-nueva-subtitle {
+    opacity: 0.85;
+    margin-bottom: 25px;
+}
+
+/* BENEFICIOS */
+.vista-nueva-benefits {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* TARJETAS */
+.vista-nueva-card-benefit {
+    background: rgba(255,255,255,0.08);
+    padding: 25px 20px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--sombra);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: 0.3s;
+}
+
+.vista-nueva-card-benefit:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.12);
+}
+
+/* ÍCONOS */
+.vista-nueva-icon {
+    font-size: 42px;
+    color: var(--dorado);
+    margin-bottom: 10px;
+}
+
+/* BOTÓN */
+.vista-nueva-register {
+    margin-top: 30px;
+}
+
+.vista-nueva-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--dorado);
+    color: var(--negro);
+    border-radius: var(--radius);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.vista-nueva-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 768px) {
+    .vista-nueva-card {
+        max-width: 600px;
+        padding: 50px 40px;
+    }
+
+    .vista-nueva-title {
+        font-size: 2.3rem;
+    }
+
+    .vista-nueva-benefits {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
