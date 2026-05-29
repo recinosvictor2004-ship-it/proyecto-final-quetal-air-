@@ -1,102 +1,115 @@
-/* ================================
-   QUETZAL AIR - RESPONSIVE SYSTEM
-   ================================ */
+/* ============================================
+   QUETZAL AIR - RESPONSIVE DESIGN
+   ============================================ */
 
-/* ============================
-   📱 MOBILE (0–480px)
-   ============================ */
-@media (max-width: 480px) {
+/* ------------------------------
+   BASE MOBILE-FIRST
+   ------------------------------ */
+/* Ya que todos tus CSS están diseñados para móvil por defecto,
+   aquí solo agregamos mejoras para pantallas más grandes. */
 
-    body {
-        padding: 1rem;
-    }
 
-    .glass-container {
-        max-width: 360px;
-        padding: 1.5rem;
-    }
+/* ============================================
+   TABLETS — >= 600px
+   ============================================ */
+@media (min-width: 600px) {
 
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    .card {
-        padding: 1.2rem;
-    }
-
-    table th, table td {
-        font-size: 0.85rem;
-        padding: 10px;
+    .menu-card,
+    .login-card {
+        max-width: 500px;
+        padding: 50px 40px;
     }
 
     .btn {
-        font-size: 15px;
-        padding: 10px;
-    }
-}
-
-/* ============================
-   📲 TABLET (481–1023px)
-   ============================ */
-@media (min-width: 481px) and (max-width: 1023px) {
-
-    body {
-        padding: 2rem;
-    }
-
-    .glass-container {
-        max-width: 600px;
-        padding: 2.5rem;
-    }
-
-    .page-container {
-        max-width: 900px;
-    }
-
-    .card {
-        padding: 2rem;
+        font-size: 1.15rem;
+        padding: 16px 45px;
     }
 
     table th, table td {
-        font-size: 1rem;
-        padding: 14px;
-    }
-
-    .btn {
-        font-size: 16px;
-        padding: 12px;
-    }
-}
-
-/* ============================
-   🖥️ DESKTOP (1024px+)
-   ============================ */
-@media (min-width: 1024px) {
-
-    body {
-        padding: 3rem;
-    }
-
-    .glass-container {
-        max-width: 450px;
-        padding: 2.5rem;
-    }
-
-    .page-container {
-        max-width: 1100px;
-    }
-
-    .card {
-        padding: 2.2rem;
-    }
-
-    table th, table td {
-        font-size: 1.05rem;
         padding: 16px;
+        font-size: 1rem;
+    }
+}
+
+
+/* ============================================
+   TABLETS GRANDES — >= 768px
+   ============================================ */
+@media (min-width: 768px) {
+
+    .menu-wrapper {
+        padding: 40px;
+    }
+
+    .menu-card {
+        max-width: 550px;
+    }
+
+    .login-card {
+        max-width: 480px;
+    }
+
+    .menu-title,
+    .login-title {
+        font-size: 2.2rem;
+    }
+
+    .menu-subtitle,
+    .login-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ============================================
+   DESKTOP — >= 992px
+   ============================================ */
+@media (min-width: 992px) {
+
+    body {
+        background: linear-gradient(180deg, var(--azul-oscuro), var(--azul-medio));
+    }
+
+    .menu-card,
+    .login-card {
+        max-width: 600px;
+        padding: 60px 50px;
     }
 
     .btn {
-        font-size: 17px;
-        padding: 14px;
+        font-size: 1.2rem;
+        padding: 18px 50px;
+    }
+
+    table th, table td {
+        padding: 18px;
+        font-size: 1.05rem;
+    }
+}
+
+
+/* ============================================
+   DESKTOP GRANDE — >= 1200px
+   ============================================ */
+@media (min-width: 1200px) {
+
+    .menu-card,
+    .login-card {
+        max-width: 650px;
+    }
+
+    .menu-title,
+    .login-title {
+        font-size: 2.4rem;
+    }
+
+    .menu-subtitle,
+    .login-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .btn {
+        font-size: 1.25rem;
+        padding: 20px 55px;
     }
 }
