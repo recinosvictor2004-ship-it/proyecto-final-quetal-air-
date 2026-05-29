@@ -260,3 +260,23 @@ th {
     width: 110px;
     height: auto;
 }
+/* Asegurar que el menú NO tape otras páginas */
+.menu-wrapper,
+.menu-card {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Asegurar que NADA esté fijo */
+.menu-wrapper,
+.menu-card,
+.header,
+.footer {
+    position: relative !important;
+}
+
+/* Evitar que algo cubra toda la pantalla */
+.menu-card,
+.menu-wrapper {
+    height: auto !important;
+}
