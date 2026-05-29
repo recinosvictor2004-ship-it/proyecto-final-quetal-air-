@@ -3,122 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quetzal Air - Pago</title>
+    <title>Pago</title>
 
-    <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- CSS RESPONSIVE -->
     <link rel="stylesheet" href="css/responsive.css">
-
-    <!-- CSS LAYOUT -->
     <link rel="stylesheet" href="css/layout.css">
-
-    <!-- CSS FORMS -->
     <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
 
-    <div class="page-container">
+    <header class="header">
+        <img src="img/logo.png" class="header-logo">
+    </header>
 
-        <!-- Encabezado -->
-        <div class="page-header">
-            <img src="img/logo.png" alt="Quetzal Air" class="login-logo">
-            <h1>Pago</h1>
-            <p class="login-subtitle">Completa los datos para finalizar tu compra</p>
-        </div>
+    <main class="menu-wrapper">
+        <div class="menu-card">
 
-        <!-- Resumen del vuelo -->
-        <div class="card">
+            <h1 class="menu-title">Pago</h1>
+            <p class="menu-subtitle">Completa tu información de pago</p>
 
-            <h2 class="section-title">Resumen del vuelo</h2>
-
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Ruta</th>
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>QA102</td>
-                            <td>GUA → SAL</td>
-                            <td>12/06/2026</td>
-                            <td>08:30 AM</td>
-                            <td>Q 850</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
-
-        <!-- Formulario de pago -->
-        <div class="card">
-
-            <h2 class="section-title">Datos de pago</h2>
-
-            <form class="form" action="loader.html" method="GET">
+            <form class="form">
 
                 <div class="form-group">
                     <label>Nombre en la tarjeta</label>
-                    <input type="text" placeholder="Ej: Juan Pérez" required>
+                    <input type="text" required>
                 </div>
 
                 <div class="form-group">
                     <label>Número de tarjeta</label>
-                    <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                    <input type="text" maxlength="16" required>
                 </div>
 
                 <div class="form-2col">
-
                     <div class="form-group">
-                        <label>Fecha de expiración</label>
+                        <label>Expiración</label>
                         <input type="month" required>
                     </div>
 
                     <div class="form-group">
                         <label>CVV</label>
-                        <input type="number" placeholder="123" required>
+                        <input type="text" maxlength="3" required>
                     </div>
-
                 </div>
 
-                <div class="form-group">
-                    <label>Método de pago</label>
-                    <select required>
-                        <option value="">Seleccionar...</option>
-                        <option>Tarjeta de crédito</option>
-                        <option>Tarjeta de débito</option>
-                        <option>PayPal</option>
-                    </select>
-                </div>
-
-                <button class="btn" type="submit">Procesar pago</button>
+                <button class="btn menu-btn">Pagar</button>
 
             </form>
 
         </div>
+    </main>
 
-        <!-- Botones -->
-        <div class="card">
-
-            <h2 class="section-title">Acciones</h2>
-
-            <div class="nav-buttons">
-                <a href="menu.html" class="btn btn-secondary">Regresar</a>
-                <a href="loader.html" class="btn">Continuar</a>
-            </div>
-
-        </div>
-
-    </div>
+    <footer class="footer">
+        <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>
