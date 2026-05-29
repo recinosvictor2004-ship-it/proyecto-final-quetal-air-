@@ -3,85 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quetzal Air - Mis Vuelos</title>
+    <title>Mis vuelos</title>
 
-    <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- CSS RESPONSIVE -->
     <link rel="stylesheet" href="css/responsive.css">
-
-    <!-- CSS LAYOUT -->
     <link rel="stylesheet" href="css/layout.css">
-
-    <!-- CSS FORMS -->
-    <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
 
-    <div class="page-container">
+    <header class="header">
+        <img src="img/logo.png" class="header-logo">
+    </header>
 
-        <!-- Encabezado -->
-        <div class="page-header">
-            <img src="img/logo.png" alt="Quetzal Air" class="login-logo">
-            <h1>Mis Vuelos</h1>
-            <p class="login-subtitle">Consulta tus vuelos reservados</p>
-        </div>
+    <main class="menu-wrapper">
+        <div class="menu-card">
 
-        <!-- Tarjeta de vuelos -->
-        <div class="card">
-
-            <h2 class="section-title">Vuelos reservados</h2>
+            <h1 class="menu-title">Mis vuelos</h1>
+            <p class="menu-subtitle">Consulta tus reservaciones</p>
 
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
                             <th>Código</th>
-                            <th>Ruta</th>
+                            <th>Destino</th>
                             <th>Fecha</th>
-                            <th>Hora</th>
                             <th>Estado</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
-                            <td>QA025</td>
-                            <td>GUA → LAX</td>
+                            <td>QA202</td>
+                            <td>El Salvador</td>
                             <td>12/06/2026</td>
-                            <td>10:30 AM</td>
-                            <td style="color: var(--verde-quetzal); font-weight: 600;">Confirmado</td>
-                        </tr>
-
-                        <tr>
-                            <td>QA185</td>
-                            <td>GUA → MEX</td>
-                            <td>05/07/2026</td>
-                            <td>12:00 PM</td>
-                            <td style="color: var(--dorado); font-weight: 600;">Aterrizó</td>
-                        </tr>
-
-                        <tr>
-                            <td>QA800</td>
-                            <td>GUA → LAX</td>
-                            <td>04/02/2026</td>
-                            <td>06:30 AM</td>
-                            <td style="color: var(--dorado); font-weight: 600;">Aterrizó</td>
+                            <td>Confirmado</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- Botones -->
-            <div class="nav-buttons">
-                <a href="menu.html" class="btn btn-secondary">Regresar</a>
-                <a href="loader.html" class="btn">Continuar</a>
-            </div>
-
         </div>
+    </main>
 
-    </div>
+    <footer class="footer">
+        <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>
