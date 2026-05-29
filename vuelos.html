@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuelos</title>
+
+    <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS LAYOUT -->
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- CSS RESPONSIVE -->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
 <header class="header">
-    <img src="img/logo.png" class="header-logo">
+    <img src="img/logo.png" class="header-logo" alt="Quetzal Air">
 </header>
 
 <main class="menu-wrapper">
@@ -18,33 +26,10 @@
         <h1 class="menu-title">Vuelos disponibles</h1>
         <p class="menu-subtitle">Selecciona un vuelo</p>
 
-        <!-- BOTÓN QUE ACTIVA EL MODAL -->
-        <label for="modalPago" class="btn menu-btn">Ver vuelo</label>
+        <a href="confirmacion.html" class="btn menu-btn">Ver vuelo</a>
 
     </div>
 </main>
-
-<!-- CHECKBOX CONTROL DEL MODAL (DEBE IR AQUÍ) -->
-<input type="checkbox" id="modalPago" hidden>
-
-<!-- MODAL UNIVERSAL -->
-<div class="modal-pago">
-    <div class="modal-content">
-
-        <!-- Vista 1: Procesando -->
-        <div class="vista-procesando">
-            <div class="loader-circle"></div>
-            <p>Procesando...</p>
-        </div>
-
-        <!-- Vista 2: Completado -->
-        <div class="vista-completado">
-            <h2>Completado</h2>
-            <a href="menu.html" class="btn menu-btn">Regresar al menú</a>
-        </div>
-
-    </div>
-</div>
 
 <footer class="footer">
     <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
