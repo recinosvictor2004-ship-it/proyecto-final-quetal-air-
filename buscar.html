@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar vuelos</title>
 
+    <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS LAYOUT -->
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- CSS FORMULARIOS -->
+    <link rel="stylesheet" href="css/forms.css">
+
+    <!-- CSS RESPONSIVE -->
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
 <header class="header">
-    <img src="img/logo.png" class="header-logo">
+    <img src="img/logo.png" class="header-logo" alt="Quetzal Air">
 </header>
 
 <main class="menu-wrapper">
@@ -20,11 +29,30 @@
         <h1 class="menu-title">Buscar vuelos</h1>
         <p class="menu-subtitle">Ingresa los datos del vuelo</p>
 
-        <form action="resultados.html">
-            <input type="text" placeholder="Origen" required>
-            <input type="text" placeholder="Destino" required>
-            <input type="date" required>
-            <button class="btn menu-btn" type="submit">Buscar</button>
+        <form action="resultados.html" class="form">
+
+            <div class="form-group">
+                <label>Origen</label>
+                <input type="text" placeholder="Ciudad de origen" required>
+            </div>
+
+            <div class="form-group">
+                <label>Destino</label>
+                <input type="text" placeholder="Ciudad de destino" required>
+            </div>
+
+            <div class="form-group">
+                <label>Fecha de salida</label>
+                <input type="date" required>
+            </div>
+
+            <div class="form-group">
+                <label>Fecha de regreso</label>
+                <input type="date">
+            </div>
+
+            <button class="btn menu-btn" type="submit">Buscar vuelos</button>
+
         </form>
 
     </div>
