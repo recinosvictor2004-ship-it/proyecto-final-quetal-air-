@@ -65,3 +65,6 @@
 .form .btn {
     margin-top: 1rem;
 }
+select, option {
+    color: #000;
+}
