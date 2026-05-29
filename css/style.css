@@ -1,0 +1,176 @@
+/* ================================
+   QUETZAL AIR - CSS GLOBAL
+   Paleta basada en el logo oficial
+   ================================ */
+
+/* Tipografía global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Colores principales */
+    --azul-profundo: #0A1A2F;
+    --verde-quetzal: #00C46A;
+    --azul-celeste: #00AEEF;
+    --dorado: #F2C94C;
+
+    /* Colores secundarios */
+    --blanco: #FFFFFF;
+    --glass: rgba(255, 255, 255, 0.15);
+    --glass-borde: rgba(255, 255, 255, 0.35);
+
+    /* Sombras */
+    --sombra: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+    /* Bordes */
+    --radius: 16px;
+}
+
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fondo global */
+body {
+    background: linear-gradient(135deg, var(--azul-profundo), #05101f);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+}
+
+/* Contenedor glass universal */
+.glass-container {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-borde);
+    border-radius: var(--radius);
+    padding: 40px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: var(--sombra);
+    animation: fadeIn 0.6s ease;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Títulos */
+h1, h2, h3 {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--glass-borde);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--blanco);
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--azul-celeste);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón principal */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--verde-quetzal);
+    color: var(--blanco);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--dorado);
+    color: #000;
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background: var(--azul-celeste);
+}
+
+.btn-secondary:hover {
+    background: var(--dorado);
+    color: #000;
+}
+
+/* Enlaces */
+a {
+    color: var(--azul-celeste);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--dorado);
+}
+
+/* Contenedor centrado para páginas internas */
+.page-container {
+    width: 95%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Tarjetas internas */
+.card {
+    background: var(--glass);
+    border: 1px solid var(--glass-borde);
+    border-radius: var(--radius);
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: var(--sombra);
+}
+
+/* Botones pequeños */
+.btn-small {
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+    .glass-container {
+        padding: 25px;
+    }
+}
