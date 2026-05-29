@@ -8,49 +8,59 @@
 </head>
 <body>
 
-<header class="header">
-    <img src="img/logo.png" class="header-logo">
-</header>
+    <!-- HEADER -->
+    <header class="header">
+        <img src="img/logo.png" class="header-logo">
+    </header>
 
-<main class="menu-wrapper">
-    <div class="menu-card">
+    <!-- CONTENIDO -->
+    <main class="menu-wrapper">
+        <div class="menu-card">
 
-        <h1 class="menu-title">Pago</h1>
-        <p class="menu-subtitle">Completa tu información de pago</p>
+            <h1 class="menu-title">Pago</h1>
+            <p class="menu-subtitle">Completa tu información de pago</p>
 
-        <form>
-            <input type="text" placeholder="Nombre en la tarjeta">
-            <input type="text" placeholder="Número de tarjeta">
-            <input type="month">
-            <input type="text" placeholder="CVV">
-        </form>
+            <form>
 
-        <label for="modalPago" class="btn menu-btn">Pagar</label>
+                <input type="text" placeholder="Nombre en la tarjeta" required>
+                <input type="text" placeholder="Número de tarjeta" maxlength="16" required>
+                <input type="month" required>
+                <input type="text" placeholder="CVV" maxlength="3" required>
 
-    </div>
-</main>
+            </form>
 
-<input type="checkbox" id="modalPago" hidden>
+            <!-- BOTÓN QUE ACTIVA EL MODAL -->
+            <label for="modalPago" class="btn menu-btn">Pagar</label>
 
-<div class="modal-pago">
-    <div class="modal-content">
-
-        <div class="vista-procesando">
-            <div class="loader-circle"></div>
-            <p>Procesando...</p>
         </div>
+    </main>
 
-        <div class="vista-completado">
-            <h2>Pago completado</h2>
-            <a href="menu.html" class="btn menu-btn">Regresar al menú</a>
+    <!-- CHECKBOX CONTROL DEL MODAL (DEBE IR AQUÍ) -->
+    <input type="checkbox" id="modalPago" hidden>
+
+    <!-- MODAL UNIVERSAL -->
+    <div class="modal-pago">
+        <div class="modal-content">
+
+            <!-- Vista 1: Procesando -->
+            <div class="vista-procesando">
+                <div class="loader-circle"></div>
+                <p>Procesando...</p>
+            </div>
+
+            <!-- Vista 2: Completado -->
+            <div class="vista-completado">
+                <h2>Pago completado</h2>
+                <a href="menu.html" class="btn menu-btn">Regresar al menú</a>
+            </div>
+
         </div>
-
     </div>
-</div>
 
-<footer class="footer">
-    <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
-</footer>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>
