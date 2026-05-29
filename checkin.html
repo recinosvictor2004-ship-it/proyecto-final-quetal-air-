@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check-in</title>
+
+    <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS LAYOUT -->
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- CSS FORMULARIOS -->
+    <link rel="stylesheet" href="css/forms.css">
+
+    <!-- CSS RESPONSIVE -->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
 <header class="header">
-    <img src="img/logo.png" class="header-logo">
+    <img src="img/logo.png" class="header-logo" alt="Quetzal Air">
 </header>
 
 <main class="menu-wrapper">
@@ -18,27 +29,37 @@
         <h1 class="menu-title">Check-in</h1>
         <p class="menu-subtitle">Ingresa tu código de reserva</p>
 
-        <form>
-            <input type="text" placeholder="Código de reserva">
+        <form class="form">
+
+            <div class="form-group">
+                <label for="codigo">Código de reserva</label>
+                <input id="codigo" type="text" placeholder="Ejemplo: QA202" required>
+            </div>
+
         </form>
 
+        <!-- BOTÓN QUE ACTIVA EL MODAL -->
         <label for="modalPago" class="btn menu-btn">Realizar check-in</label>
 
     </div>
 </main>
 
+<!-- CHECKBOX CONTROL DEL MODAL -->
 <input type="checkbox" id="modalPago" hidden>
 
+<!-- MODAL UNIVERSAL -->
 <div class="modal-pago">
     <div class="modal-content">
 
+        <!-- Vista 1: Procesando -->
         <div class="vista-procesando">
             <div class="loader-circle"></div>
             <p>Procesando...</p>
         </div>
 
+        <!-- Vista 2: Completado -->
         <div class="vista-completado">
-            <h2>Completado</h2>
+            <h2>Check-in completado</h2>
             <a href="menu.html" class="btn menu-btn">Regresar al menú</a>
         </div>
 
