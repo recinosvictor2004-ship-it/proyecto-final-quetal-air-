@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar vuelos</title>
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
@@ -18,34 +20,15 @@
         <h1 class="menu-title">Buscar vuelos</h1>
         <p class="menu-subtitle">Ingresa los datos del vuelo</p>
 
-        <form>
-            <input type="text" placeholder="Origen">
-            <input type="text" placeholder="Destino">
-            <input type="date">
+        <form action="resultados.html">
+            <input type="text" placeholder="Origen" required>
+            <input type="text" placeholder="Destino" required>
+            <input type="date" required>
+            <button class="btn menu-btn" type="submit">Buscar</button>
         </form>
-
-        <label for="modalPago" class="btn menu-btn">Buscar</label>
 
     </div>
 </main>
-
-<input type="checkbox" id="modalPago" hidden>
-
-<div class="modal-pago">
-    <div class="modal-content">
-
-        <div class="vista-procesando">
-            <div class="loader-circle"></div>
-            <p>Procesando...</p>
-        </div>
-
-        <div class="vista-completado">
-            <h2>Completado</h2>
-            <a href="menu.html" class="btn menu-btn">Regresar al menú</a>
-        </div>
-
-    </div>
-</div>
 
 <footer class="footer">
     <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
