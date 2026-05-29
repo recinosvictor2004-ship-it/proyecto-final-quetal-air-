@@ -1,31 +1,25 @@
 /* ================================
    QUETZAL AIR - CSS GLOBAL
-   Paleta basada en el logo oficial
    ================================ */
 
-/* Tipografía global */
+/* Tipografía */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    /* Colores principales */
     --azul-profundo: #0A1A2F;
     --verde-quetzal: #00C46A;
     --azul-celeste: #00AEEF;
     --dorado: #F2C94C;
 
-    /* Colores secundarios */
     --blanco: #FFFFFF;
     --glass: rgba(255, 255, 255, 0.15);
     --glass-borde: rgba(255, 255, 255, 0.35);
 
-    /* Sombras */
     --sombra: 0 8px 32px rgba(0, 0, 0, 0.25);
-
-    /* Bordes */
     --radius: 16px;
 }
 
-/* Reset general */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -39,15 +33,13 @@ body {
     min-height: 100vh;
     color: var(--blanco);
     display: flex;
-    flex-direction: column; /* permite header arriba y footer abajo */
+    flex-direction: column;
 }
- 
 
-/* Contenedor glass universal */
+/* LOGIN */
 .glass-container {
     background: var(--glass);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-borde);
     border-radius: var(--radius);
     padding: 40px;
@@ -55,19 +47,13 @@ body {
     max-width: 420px;
     box-shadow: var(--sombra);
     animation: fadeIn 0.6s ease;
+    margin: auto;
 }
 
-/* Animación suave */
+/* Animación */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* Títulos */
-h1, h2, h3 {
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 /* Inputs */
@@ -88,7 +74,7 @@ input:focus {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Botón principal */
+/* Botones */
 .btn {
     width: 100%;
     padding: 12px;
@@ -107,82 +93,6 @@ input:focus {
     color: #000;
 }
 
-/* Botón secundario */
-.btn-secondary {
-    background: var(--azul-celeste);
-}
-
-.btn-secondary:hover {
-    background: var(--dorado);
-    color: #000;
-}
-
-/* Enlaces */
-a {
-    color: var(--azul-celeste);
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: var(--dorado);
-}
-
-/* Contenedor centrado para páginas internas */
-.page-container {
-    width: 95%;
-    max-width: 900px;
-    margin: auto;
-}
-
-/* Tarjetas internas */
-.card {
-    background: var(--glass);
-    border: 1px solid var(--glass-borde);
-    border-radius: var(--radius);
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: var(--sombra);
-}
-
-/* Botones pequeños */
-.btn-small {
-    padding: 8px 14px;
-    font-size: 14px;
-}
-
-/* Tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th, td {
-    padding: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-th {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Responsividad */
-@media (max-width: 480px) {
-    .glass-container {
-        padding: 25px;
-    }
-}
-.index-logo {
-    width: 120px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-/* Separación entre botones del menú */
-.menu-btn {
-    margin-bottom: 12px; /* separa cada botón */
-}
 /* HEADER */
 .header {
     width: 100%;
@@ -195,20 +105,19 @@ th {
 }
 
 .header-logo {
-    width: 150px;
+    width: 110px;
     height: auto;
 }
 
-/* CONTENEDOR CENTRAL */
+/* MENÚ */
 .menu-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 160px); /* espacio entre header y footer */
+    flex: 1;
     padding: 20px;
 }
 
-/* TARJETA GLASS */
 .menu-card {
     width: 100%;
     max-width: 420px;
@@ -221,7 +130,6 @@ th {
     text-align: center;
 }
 
-/* TITULOS */
 .menu-title {
     font-size: 2rem;
     margin-bottom: 5px;
@@ -232,17 +140,11 @@ th {
     margin-bottom: 25px;
 }
 
-/* BOTONES */
 .menu-buttons .menu-btn {
     display: block;
     margin-bottom: 15px;
     font-size: 1.1rem;
     padding: 12px;
-}
-
-/* ENLACES */
-.menu-links {
-    margin-top: 15px;
 }
 
 /* FOOTER */
@@ -252,52 +154,4 @@ th {
     color: #fff;
     opacity: 0.7;
     font-size: 0.9rem;
-}
-/* Tamaño estándar del logo en todas las páginas */
-.header-logo,
-.login-logo,
-.index-logo {
-    width: 110px;
-    height: auto;
-}
-/* Asegurar que el menú NO tape otras páginas */
-.menu-wrapper,
-.menu-card {
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-/* Asegurar que NADA esté fijo */
-.menu-wrapper,
-.menu-card,
-.header,
-.footer {
-    position: relative !important;
-}
-
-/* Evitar que algo cubra toda la pantalla */
-.menu-card,
-.menu-wrapper {
-    height: auto !important;
-}
-/* CONTENEDOR CENTRAL */
-.menu-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 160px);
-    padding: 20px;
-}
-
-/* TARJETA GLASS */
-.menu-card {
-    width: 100%;
-    max-width: 420px;
-    padding: 30px;
-    background: var(--glass);
-    border: 1px solid var(--glass-borde);
-    border-radius: var(--radius);
-    backdrop-filter: blur(14px);
-    box-shadow: var(--sombra);
-    text-align: center;
 }
