@@ -37,11 +37,11 @@
 body {
     background: linear-gradient(135deg, var(--azul-profundo), #05101f);
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: var(--blanco);
+    display: flex;
+    flex-direction: column; /* permite header arriba y footer abajo */
 }
+ 
 
 /* Contenedor glass universal */
 .glass-container {
