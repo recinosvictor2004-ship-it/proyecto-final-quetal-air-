@@ -58,11 +58,35 @@
 
             <div class="menu-buttons" style="margin-top: 25px;">
                 <a href="buscar.html" class="btn menu-btn">Nueva búsqueda</a>
-                <a href="pago.html" class="btn menu-btn">Continuar</a>
+
+                <!-- BOTÓN QUE ACTIVA EL MODAL -->
+                <label for="modalPago" class="btn menu-btn">Continuar</label>
             </div>
 
         </div>
     </main>
+
+    <!-- CHECKBOX CONTROL DEL MODAL -->
+    <input type="checkbox" id="modalPago" hidden>
+
+    <!-- MODAL UNIVERSAL -->
+    <div class="modal-pago">
+        <div class="modal-content">
+
+            <!-- Vista 1: Procesando -->
+            <div class="vista-procesando">
+                <div class="loader-circle"></div>
+                <p>Procesando...</p>
+            </div>
+
+            <!-- Vista 2: Completado -->
+            <div class="vista-completado">
+                <h2>Completado</h2>
+                <a href="pago.html" class="btn menu-btn">Ir al pago</a>
+            </div>
+
+        </div>
+    </div>
 
     <footer class="footer">
         <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
