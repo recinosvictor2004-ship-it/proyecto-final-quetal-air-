@@ -1,33 +1,110 @@
-/* ================================
-   LOGIN - QUETZAL AIR
-   ================================ */
+/* ============================================
+   QUETZAL AIR - LOGIN
+   ============================================ */
 
-.login-logo {
-    width: 120px;
-    display: block;
-    margin: 0 auto 20px;
+/* CONTENEDOR PRINCIPAL DEL LOGIN */
+.login-card {
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+    margin-top: 40px;
+    background: var(--glass);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    backdrop-filter: blur(14px);
+    text-align: center;
 }
 
+/* LOGO */
+.login-logo {
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+/* ICONO SUPERIOR */
+.login-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--dorado);
+    color: var(--negro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* TÍTULOS */
 .login-title {
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .login-subtitle {
-    text-align: center;
-    font-size: 0.95rem;
-    opacity: 0.8;
-    margin-bottom: 2rem;
+    opacity: 0.85;
+    margin-bottom: 20px;
 }
 
+/* FORMULARIO */
+.login-card .form {
+    margin-top: 10px;
+}
+
+/* INPUTS (heredan de forms.css, pero aquí afinamos detalles) */
+.login-card input {
+    background: var(--blanco);
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* BOTÓN PRINCIPAL */
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: var(--dorado);
+    color: var(--negro);
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+}
+
+/* BOTÓN SECUNDARIO (outline) */
+.login-btn-outline {
+    background: transparent;
+    border: 2px solid var(--dorado);
+    color: var(--dorado);
+}
+
+.login-btn-outline:hover {
+    background: var(--dorado);
+    color: var(--negro);
+}
+
+/* ENLACES */
 .login-links {
-    text-align: center;
-    margin-top: 1rem;
+    margin-top: 20px;
 }
 
 .login-links a {
-    display: inline-block;
-    margin: 5px 0;
+    color: var(--dorado);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-links a:hover {
+    opacity: 0.7;
 }
