@@ -110,3 +110,32 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+/* ============================================
+   RESPONSIVE - QUETZAL AIR VISTA NUEVA
+   ============================================ */
+
+@media (min-width: 600px) {
+    .vista-nueva-card {
+        max-width: 600px;
+        padding: 50px 40px;
+    }
+
+    .vista-nueva-title {
+        font-size: 2.3rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .vista-nueva-benefits {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .vista-nueva-card-benefit {
+        padding: 30px 25px;
+    }
+
+    .vista-nueva-icon {
+        font-size: 48px;
+    }
+}
