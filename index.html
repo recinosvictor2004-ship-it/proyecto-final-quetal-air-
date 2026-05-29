@@ -5,137 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quetzal Air</title>
 
+    <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-
-        /* ======== FONDO DEGRADADO ======== */
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: linear-gradient(180deg, #ff6a88, #ff8c42);
-            overflow-x: hidden;
-        }
-
-        /* ======== MENÚ SUPERIOR ======== */
-        .top-nav {
-            width: 100%;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .top-nav a {
-            color: white;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .top-nav a:hover {
-            color: #ffe9b0;
-        }
-
-        /* ======== SOL Y MONTAÑAS ======== */
-        .sun {
-            width: 350px;
-            height: 350px;
-            background: #ffd27f;
-            border-radius: 50%;
-            position: absolute;
-            top: 120px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0.8;
-            filter: blur(2px);
-        }
-
-        .mountains {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 300px;
-            background: url('img/montanas.png') center/cover no-repeat;
-        }
-
-        /* ======== CONTENIDO CENTRAL ======== */
-        .landing-content {
-            margin-top: 200px;
-            text-align: center;
-            color: white;
-            z-index: 2;
-        }
-
-        .landing-title {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .landing-subtitle {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: auto;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-
-        .landing-btn {
-            padding: 14px 40px;
-            background: white;
-            color: #ff6a88;
-            border-radius: 30px;
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .landing-btn:hover {
-            background: #ffe9b0;
-            color: #d94f6a;
-        }
-
-    </style>
+    <!-- CSS DE LA BIENVENIDA -->
+    <link rel="stylesheet" href="css/welcome.css">
 </head>
 <body>
 
-    <!-- MENÚ SUPERIOR -->
-    <div class="top-nav">
-        <div>QUETZAL AIR</div>
-        <div>
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Historia</a>
-            <a href="#">Blog</a>
-            <a href="#">Contacto</a>
-        </div>
-    </div>
+    <!-- HERO COMPLETO -->
+    <header class="welcome-header">
+        <img src="img/logo.png" alt="Quetzal Air" class="welcome-logo">
+    </header>
 
-    <!-- SOL -->
-    <div class="sun"></div>
+    <!-- CÍRCULO AZUL (SOL/LUNA) -->
+    <div class="welcome-sun"></div>
+
+    <!-- MONTAÑAS -->
+    <div class="welcome-mountains"></div>
 
     <!-- CONTENIDO CENTRAL -->
-    <div class="landing-content">
-        <h1 class="landing-title">Bienvenido</h1>
-        <p class="landing-subtitle">
-            Viajar es más que moverse de un lugar a otro.  
-            Es descubrir, sentir y vivir nuevas experiencias.  
+    <main class="welcome-content">
+        <h1 class="welcome-title">Bienvenido</h1>
+        <p class="welcome-subtitle">
+            Viajar es descubrir, sentir y vivir nuevas experiencias.  
             Con Quetzal Air, tu viaje comienza aquí.
         </p>
 
-        <a href="login.html" class="landing-btn">Iniciar sesión</a>
-    </div>
-
-    <!-- MONTAÑAS (puedes usar una imagen tuya) -->
-    <div class="mountains"></div>
+        <a href="login.html" class="welcome-btn">Iniciar sesión</a>
+    </main>
 
 </body>
 </html>
