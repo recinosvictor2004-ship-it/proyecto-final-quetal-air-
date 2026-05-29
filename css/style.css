@@ -195,14 +195,50 @@ th {
 }
 
 .header-logo {
-    width: 140px;
+    width: 150px;
     height: auto;
 }
 
-/* SEPARACIÓN ENTRE BOTONES */
-.menu-options .menu-btn {
+/* CONTENEDOR PRINCIPAL */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* TARJETA GLASS */
+.glass-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    background: var(--glass);
+    border: 1px solid var(--glass-borde);
+    border-radius: var(--radius);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+/* TITULOS */
+.menu-title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.menu-subtitle {
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+/* BOTONES */
+.menu-buttons .menu-btn {
     display: block;
     margin-bottom: 15px;
+}
+
+/* ENLACES */
+.menu-links {
+    margin-top: 15px;
 }
 
 /* FOOTER */
