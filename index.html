@@ -12,10 +12,29 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <style>
+        /* Fondo con imagen */
         body {
             background: url('img/fondo-avion.jpg') center/cover no-repeat fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
+        /* Franja superior con color */
+        .top-color-bar {
+            width: 100%;
+            padding: 25px 0;
+            background: var(--azul-celeste); /* puedes cambiar a var(--verde-quetzal) */
+            text-align: center;
+        }
+
+        /* Logo especial para el index */
+        .index-logo {
+            width: 140px;
+            height: auto;
+        }
+
+        /* Contenedor glass */
         .welcome-container {
             max-width: 600px;
             padding: 3rem;
@@ -24,7 +43,7 @@
             border-radius: var(--radius);
             box-shadow: var(--sombra);
             backdrop-filter: blur(14px);
-            margin: 5rem auto;
+            margin: 4rem auto;
             text-align: center;
         }
 
@@ -39,19 +58,17 @@
             opacity: 0.9;
             margin-bottom: 2rem;
         }
-        /* Logo especial para el index */
-        .index-logo {
-            width: 140px;      /* tamaño ideal */
-            height: auto;
-            margin-bottom: 1rem;
-        }
     </style>
 </head>
 <body>
 
-    <div class="welcome-container">
-
+    <!-- FRANJA SUPERIOR CON COLOR -->
+    <div class="top-color-bar">
         <img src="img/logo.png" alt="Quetzal Air" class="index-logo">
+    </div>
+
+    <!-- CONTENEDOR GLASS -->
+    <div class="welcome-container">
 
         <h1 class="welcome-title">Bienvenido a Quetzal Air</h1>
         <p class="welcome-subtitle">Tu viaje comienza con nosotros</p>
