@@ -199,15 +199,17 @@ th {
     height: auto;
 }
 
-/* CONTENEDOR PRINCIPAL */
-.menu-container {
+/* CONTENEDOR CENTRAL */
+.menu-wrapper {
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    align-items: center;
+    min-height: calc(100vh - 160px); /* espacio entre header y footer */
+    padding: 20px;
 }
 
 /* TARJETA GLASS */
-.glass-card {
+.menu-card {
     width: 100%;
     max-width: 420px;
     padding: 30px;
@@ -234,6 +236,8 @@ th {
 .menu-buttons .menu-btn {
     display: block;
     margin-bottom: 15px;
+    font-size: 1.1rem;
+    padding: 12px;
 }
 
 /* ENLACES */
@@ -243,7 +247,6 @@ th {
 
 /* FOOTER */
 .footer {
-    margin-top: 40px;
     padding: 15px;
     text-align: center;
     color: #fff;
