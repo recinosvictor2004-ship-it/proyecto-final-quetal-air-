@@ -1,246 +1,157 @@
-/* ================================
-   QUETZAL AIR - CSS GLOBAL
-   ================================ */
+/* ============================================
+   QUETZAL AIR - ESTILOS GLOBALES
+   ============================================ */
 
-/* Tipografía */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+/* ------------------------------
+   VARIABLES
+   ------------------------------ */
 :root {
-    --azul-profundo: #0A1A2F;
-    --verde-quetzal: #00C46A;
-    --azul-celeste: #00AEEF;
-    --dorado: #F2C94C;
+    --azul-oscuro: #00172D;
+    --azul-medio: #003B6F;
+    --azul-celeste: #4DA8DA;
+    --blanco: #ffffff;
+    --gris-claro: #e6e6e6;
+    --dorado: #E8C547;
+    --negro: #0A1A2F;
+    --verde-quetzal: #00C48C;
 
-    --blanco: #FFFFFF;
-    --glass: rgba(255, 255, 255, 0.15);
-    --glass-borde: rgba(255, 255, 255, 0.35);
-
-    --sombra: 0 8px 32px rgba(0, 0, 0, 0.25);
-    --radius: 16px;
+    --radius: 14px;
+    --sombra: 0 8px 32px rgba(0,0,0,0.35);
+    --glass: rgba(255, 255, 255, 0.08);
 }
 
-/* Reset */
+/* ------------------------------
+   RESET
+   ------------------------------ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-/* Fondo global */
 body {
-    background: linear-gradient(135deg, var(--azul-profundo), #05101f);
+    background: linear-gradient(180deg, var(--azul-oscuro), var(--azul-medio));
+    color: var(--blanco);
     min-height: 100vh;
-    color: var(--blanco);
-    display: flex;
-    flex-direction: column;
+    overflow-x: hidden;
 }
 
-/* LOGIN */
-.glass-container {
-    background: var(--glass);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-borde);
-    border-radius: var(--radius);
-    padding: 40px;
-    width: 90%;
-    max-width: 420px;
-    box-shadow: var(--sombra);
-    animation: fadeIn 0.6s ease;
-    margin: auto;
-}
-
-/* Animación */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Inputs */
-input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0 20px;
-    border-radius: var(--radius);
-    border: 1px solid var(--glass-borde);
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--blanco);
-    outline: none;
-    transition: 0.3s;
-}
-
-input:focus {
-    border-color: var(--azul-celeste);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Botones */
-.btn {
-    width: 100%;
-    padding: 12px;
-    background: var(--verde-quetzal);
-    color: var(--blanco);
-    border: none;
-    border-radius: var(--radius);
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: var(--dorado);
-    color: #000;
-}
-
-/* HEADER */
+/* ------------------------------
+   LOGO Y HEADER
+   ------------------------------ */
 .header {
     width: 100%;
-    padding: 15px 25px;
-    display: flex;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    text-align: center;
 }
 
 .header-logo {
-    width: 110px;
-    height: auto;
+    width: 140px;
 }
 
-/* MENÚ */
-.menu-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    padding: 20px;
-}
-
-.menu-card {
-    width: 100%;
-    max-width: 420px;
-    padding: 30px;
-    background: var(--glass);
-    border: 1px solid var(--glass-borde);
+/* ------------------------------
+   BOTONES
+   ------------------------------ */
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--dorado);
+    color: var(--negro);
     border-radius: var(--radius);
-    backdrop-filter: blur(14px);
-    box-shadow: var(--sombra);
-    text-align: center;
-}
-
-.menu-title {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-.menu-subtitle {
-    opacity: 0.8;
-    margin-bottom: 25px;
-}
-
-.menu-buttons .menu-btn {
-    display: block;
-    margin-bottom: 15px;
     font-size: 1.1rem;
-    padding: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
 }
 
-/* FOOTER */
-.footer {
-    padding: 15px;
-    text-align: center;
-    color: #fff;
-    opacity: 0.7;
-    font-size: 0.9rem;
+.btn:hover {
+    transform: scale(1.05);
 }
 
-/* Franja superior del login */
-.login-header {
-    width: 100%;
-    padding: 25px 0;
-    background: var(--azul-celeste);
+/* Botón transparente (para logout o acciones secundarias) */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--dorado);
+    color: var(--dorado);
+}
+
+.btn-outline:hover {
+    background: var(--dorado);
+    color: var(--negro);
+}
+
+/* ------------------------------
+   TARJETAS (CARDS)
+   ------------------------------ */
+.menu-card,
+.login-card {
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+    background: var(--glass);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    backdrop-filter: blur(14px);
     text-align: center;
+}
+
+/* ------------------------------
+   TÍTULOS
+   ------------------------------ */
+.menu-title,
+.login-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.menu-subtitle,
+.login-subtitle {
+    opacity: 0.85;
     margin-bottom: 20px;
 }
 
-/* ================================
-   MODAL UNIVERSAL (ANIMACIÓN 5s)
-   ================================ */
-
-.modal-pago {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* ------------------------------
+   TABLAS
+   ------------------------------ */
+.table-container {
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+    overflow-x: auto;
+    margin-top: 20px;
 }
 
-/* Mostrar modal */
-#modalPago:checked ~ .modal-pago {
-    display: flex;
-}
-
-/* Caja del modal */
-.modal-content {
+table {
+    width: 100%;
+    border-collapse: collapse;
     background: var(--glass);
-    border: 1px solid var(--glass-borde);
     border-radius: var(--radius);
-    padding: 30px;
-    width: 90%;
-    max-width: 350px;
+    overflow: hidden;
+}
+
+thead {
+    background: var(--azul-celeste);
+    color: var(--negro);
+}
+
+th, td {
+    padding: 14px;
     text-align: center;
-    backdrop-filter: blur(12px);
-    box-shadow: var(--sombra);
 }
 
-/* Loader */
-.loader-circle {
-    width: 70px;
-    height: 70px;
-    border: 6px solid rgba(255,255,255,0.3);
-    border-top-color: white;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 0 auto 1rem;
+tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.05);
 }
 
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* Vistas */
-.vista-procesando { display: block; }
-.vista-completado { display: none; }
-
-/* Cambio automático */
-#modalPago:checked ~ .modal-pago .vista-procesando {
-    animation: hideView 0s forwards 5s;
-}
-
-#modalPago:checked ~ .modal-pago .vista-completado {
-    animation: showView 0s forwards 5s;
-}
-
-@keyframes hideView { to { display: none; } }
-@keyframes showView { to { display: block; } }
-
-/* Links del login en color blanco */
-.login-links a {
-    color: var(--blanco);
-    text-decoration: none;
+/* ------------------------------
+   FOOTER
+   ------------------------------ */
+.footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.8;
     font-size: 0.9rem;
-    opacity: 0.9;
-    transition: 0.3s;
-}
-
-.login-links a:hover {
-    color: var(--dorado);
-    opacity: 1;
 }
