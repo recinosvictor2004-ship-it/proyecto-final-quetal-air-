@@ -253,3 +253,10 @@ th {
     opacity: 0.7;
     font-size: 0.9rem;
 }
+/* Tamaño estándar del logo en todas las páginas */
+.header-logo,
+.login-logo,
+.index-logo {
+    width: 110px;
+    height: auto;
+}
