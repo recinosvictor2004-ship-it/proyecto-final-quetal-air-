@@ -230,3 +230,17 @@ input:focus {
 
 @keyframes hideView { to { display: none; } }
 @keyframes showView { to { display: block; } }
+
+/* Links del login en color blanco */
+.login-links a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.login-links a:hover {
+    color: var(--dorado);
+    opacity: 1;
+}
