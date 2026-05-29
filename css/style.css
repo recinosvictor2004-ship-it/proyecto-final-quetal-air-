@@ -174,3 +174,8 @@ th {
         padding: 25px;
     }
 }
+.index-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
