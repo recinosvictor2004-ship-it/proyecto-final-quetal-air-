@@ -280,3 +280,24 @@ th {
 .menu-wrapper {
     height: auto !important;
 }
+/* CONTENEDOR CENTRAL */
+.menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+    padding: 20px;
+}
+
+/* TARJETA GLASS */
+.menu-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    background: var(--glass);
+    border: 1px solid var(--glass-borde);
+    border-radius: var(--radius);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--sombra);
+    text-align: center;
+}
