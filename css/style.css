@@ -179,3 +179,7 @@ th {
     height: auto;
     margin-bottom: 1rem;
 }
+/* Separación entre botones del menú */
+.menu-btn {
+    margin-bottom: 12px; /* separa cada botón */
+}
