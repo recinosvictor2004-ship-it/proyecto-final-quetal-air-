@@ -8,35 +8,26 @@
     <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- CSS RESPONSIVE -->
-    <link rel="stylesheet" href="css/responsive.css">
-
     <!-- CSS LAYOUT -->
     <link rel="stylesheet" href="css/layout.css">
+
+    <!-- CSS LOGIN PREMIUM -->
+    <link rel="stylesheet" href="css/login-new.css">
+
+    <!-- CSS RESPONSIVE -->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-    <div class="glass-container" style="text-align: center;">
+    <div class="login-card" style="max-width: 420px;">
+
+        <!-- Icono de éxito -->
+        <div class="login-icon" style="background: var(--verde-quetzal); font-size: 38px;">
+            ✓
+        </div>
 
         <!-- Logo -->
         <img src="img/logo.png" alt="Quetzal Air" class="login-logo">
-
-        <!-- Icono de éxito -->
-        <div style="
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            background: var(--verde-quetzal);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
-            font-weight: bold;
-            color: #fff;
-        ">
-            ✓
-        </div>
 
         <!-- Mensaje -->
         <h1 class="login-title">¡Operación exitosa!</h1>
@@ -44,8 +35,10 @@
 
         <!-- Botones -->
         <div class="form" style="margin-top: 2rem;">
-            <a href="menu.html" class="btn">Volver al menú</a>
-            <a href="index.html" class="btn btn-secondary">Cerrar sesión</a>
+            <a href="menu.html" class="login-btn" style="text-align:center;">Volver al menú</a>
+            <a href="index.html" class="login-btn" style="background: transparent; border: 2px solid var(--dorado); color: var(--dorado); margin-top: 10px; text-align:center;">
+                Cerrar sesión
+            </a>
         </div>
 
     </div>
