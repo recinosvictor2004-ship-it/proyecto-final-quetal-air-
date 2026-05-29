@@ -2,7 +2,6 @@
    QUETZAL AIR - PANTALLA DE BIENVENIDA
    ============================================ */
 
-/* CONTENEDOR PRINCIPAL */
 .welcome-container {
     width: 100%;
     min-height: 100vh;
@@ -17,7 +16,7 @@
     position: relative;
 }
 
-/* CÍRCULO AZUL DECORATIVO */
+/* CÍRCULO DECORATIVO */
 .welcome-circle {
     position: absolute;
     top: -120px;
@@ -30,18 +29,59 @@
     filter: blur(4px);
 }
 
-/* MONTAÑAS */
+/* MONTAÑAS HECHAS CON CSS */
 .welcome-mountains {
-    width: 100%;
-    max-width: 600px;
-    opacity: 0.9;
-    margin-bottom: 20px;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 180px;
+    overflow: hidden;
+}
+
+/* Montaña principal */
+.welcome-mountains::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 0;
+    height: 0;
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 220px solid #0b2745;
+}
+
+/* Montaña secundaria */
+.welcome-mountains::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 10%;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 190px solid #06182e;
 }
 
 /* LOGO */
 .welcome-logo {
     width: 160px;
     margin-bottom: 20px;
+}
+
+/* CARD CENTRAL */
+.welcome-card {
+    background: var(--glass);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    backdrop-filter: blur(14px);
+    max-width: 500px;
+    width: 90%;
+    margin-top: 20px;
 }
 
 /* TÍTULO */
@@ -58,7 +98,7 @@
     margin-bottom: 30px;
 }
 
-/* BOTÓN PRINCIPAL */
+/* BOTÓN */
 .welcome-btn {
     display: inline-block;
     padding: 14px 40px;
@@ -74,18 +114,6 @@
 
 .welcome-btn:hover {
     transform: scale(1.05);
-}
-
-/* GLASS CARD (opcional si la usas) */
-.welcome-card {
-    background: var(--glass);
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: var(--sombra);
-    backdrop-filter: blur(14px);
-    max-width: 500px;
-    width: 90%;
-    margin-top: 20px;
 }
 
 /* RESPONSIVE */
