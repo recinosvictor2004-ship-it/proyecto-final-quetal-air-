@@ -5,92 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuelos disponibles</title>
 
+    <!-- CSS GLOBAL -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- CSS LAYOUT -->
     <link rel="stylesheet" href="css/layout.css">
+
+    <!-- CSS RESPONSIVE -->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-    <header class="header">
-        <img src="img/logo.png" class="header-logo">
-    </header>
+<header class="header">
+    <img src="img/logo.png" class="header-logo" alt="Quetzal Air">
+</header>
 
-    <main class="menu-wrapper">
-        <div class="menu-card">
+<main class="menu-wrapper">
+    <div class="menu-card">
 
-            <h1 class="menu-title">Vuelos disponibles</h1>
-            <p class="menu-subtitle">Resultados de tu búsqueda</p>
+        <h1 class="menu-title">Vuelos disponibles</h1>
+        <p class="menu-subtitle">Resultados de tu búsqueda</p>
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Origen</th>
-                            <th>Destino</th>
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
 
-                    <tbody>
-                        <tr>
-                            <td>QA202</td>
-                            <td>Guatemala</td>
-                            <td>El Salvador</td>
-                            <td>12/06/2026</td>
-                            <td>08:30 AM</td>
-                            <td>Q 850</td>
-                        </tr>
+                <tbody>
+                    <tr>
+                        <td>QA202</td>
+                        <td>Guatemala</td>
+                        <td>El Salvador</td>
+                        <td>12/06/2026</td>
+                        <td>08:30 AM</td>
+                        <td>Q 850</td>
+                    </tr>
 
-                        <tr>
-                            <td>QA330</td>
-                            <td>Guatemala</td>
-                            <td>Costa Rica</td>
-                            <td>15/06/2026</td>
-                            <td>02:45 PM</td>
-                            <td>Q 1250</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    <tr>
+                        <td>QA330</td>
+                        <td>Guatemala</td>
+                        <td>Costa Rica</td>
+                        <td>15/06/2026</td>
+                        <td>02:45 PM</td>
+                        <td>Q 1250</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
             <div class="menu-buttons" style="margin-top: 25px;">
                 <a href="buscar.html" class="btn menu-btn">Nueva búsqueda</a>
-
-                <!-- BOTÓN QUE ACTIVA EL MODAL -->
-                <label for="modalPago" class="btn menu-btn">Continuar</label>
+                <a href="pago.html" class="btn menu-btn">Continuar</a>
             </div>
 
         </div>
     </main>
 
-    <!-- CHECKBOX CONTROL DEL MODAL -->
-    <input type="checkbox" id="modalPago" hidden>
-
-    <!-- MODAL UNIVERSAL -->
-    <div class="modal-pago">
-        <div class="modal-content">
-
-            <!-- Vista 1: Procesando -->
-            <div class="vista-procesando">
-                <div class="loader-circle"></div>
-                <p>Procesando...</p>
-            </div>
-
-            <!-- Vista 2: Completado -->
-            <div class="vista-completado">
-                <h2>Completado</h2>
-                <a href="pago.html" class="btn menu-btn">Ir al pago</a>
-            </div>
-
-        </div>
-    </div>
-
-    <footer class="footer">
-        <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
-    </footer>
+<footer class="footer">
+    <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
