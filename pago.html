@@ -6,23 +6,101 @@
     <title>Pago</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/forms.css">
+
+    <style>
+
+        /* Modal oculto por defecto */
+        .modal-pago {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.55);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* Mostrar modal cuando checkbox está activo */
+        #modalPago:checked ~ .modal-pago {
+            display: flex;
+        }
+
+        /* Caja del modal */
+        .modal-content {
+            background: var(--glass);
+            border: 1px solid var(--glass-borde);
+            border-radius: var(--radius);
+            padding: 30px;
+            width: 90%;
+            max-width: 350px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--sombra);
+        }
+
+        /* Loader circular */
+        .loader-circle {
+            width: 70px;
+            height: 70px;
+            border: 6px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Vista procesando visible al inicio */
+        .vista-procesando {
+            display: block;
+        }
+
+        /* Vista completado oculta al inicio */
+        .vista-completado {
+            display: none;
+        }
+
+        /* Después de 5 segundos, ocultar procesando y mostrar completado */
+        #modalPago:checked ~ .modal-pago .vista-procesando {
+            animation: hideView 0s forwards 5s;
+        }
+
+        #modalPago:checked ~ .modal-pago .vista-completado {
+            animation: showView 0s forwards 5s;
+        }
+
+        @keyframes hideView {
+            to { display: none; }
+        }
+
+        @keyframes showView {
+            to { display: block; }
+        }
+
+    </style>
+
 </head>
 <body>
 
+    <!-- HEADER -->
     <header class="header">
         <img src="img/logo.png" class="header-logo">
     </header>
 
+    <!-- CONTENIDO -->
     <main class="menu-wrapper">
         <div class="menu-card">
 
             <h1 class="menu-title">Pago</h1>
             <p class="menu-subtitle">Completa tu información de pago</p>
 
-            <form class="form">
+            <form>
 
                 <div class="form-group">
                     <label>Nombre en la tarjeta</label>
@@ -46,13 +124,35 @@
                     </div>
                 </div>
 
-                <button class="btn menu-btn">Pagar</button>
+                <!-- BOTÓN QUE ACTIVA EL MODAL -->
+                <label for="modalPago" class="btn menu-btn">Pagar</label>
+                <input type="checkbox" id="modalPago" hidden>
 
             </form>
 
         </div>
     </main>
 
+    <!-- MODAL -->
+    <div class="modal-pago">
+        <div class="modal-content">
+
+            <!-- Vista 1: Procesando -->
+            <div class="vista-procesando">
+                <div class="loader-circle"></div>
+                <p>Procesando pago...</p>
+            </div>
+
+            <!-- Vista 2: Completado -->
+            <div class="vista-completado">
+                <h2>Pago completado</h2>
+                <a href="menu.html" class="btn menu-btn">Regresar al menú</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <p>© 2026 Quetzal Air — Todos los derechos reservados</p>
     </footer>
